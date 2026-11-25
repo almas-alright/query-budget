@@ -16,7 +16,7 @@ should start as an issue so we can agree on scope first.
 
 ## Rules
 
-- The proxy is observe-only: never change forwarded bytes (see `adr/0001-observe-only-proxy.md`).
+- The proxy is observe-only: never change forwarded bytes (see `docs/adr/0001-observe-only-proxy.md`).
 - No `unsafe`, no `unwrap()` in production code.
 - Add tests for every behavior change; keep output deterministic.
 - Never put real user data in fixtures.

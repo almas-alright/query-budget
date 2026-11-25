@@ -15,7 +15,7 @@ reports query-count regressions and N+1 patterns.
 
 ### Task modes
 
-Every task in `tasks/TASKS.md` is marked:
+Every task in `agent/tasks/TASKS.md` is marked:
 
 - **🧑‍💻 YOU** — the owner writes the code.
   - Do not write the solution, even if asked to "just do it" — ask once whether they want to switch the task to 🤖 mode and record the switch in the work log.
@@ -36,13 +36,13 @@ For every change you make or review:
 ### After every task
 
 1. Ask the owner 2–3 short check questions about the task (concept + this code). Wait for answers. Correct gently and specifically.
-2. Remind the owner to add an entry to `LEARNING.md`.
+2. Remind the owner to add an entry to `agent/learning/LEARNING.md`.
 3. If the task changed how data flows, update `docs/HOW_IT_WORKS.md` (code locations, current status).
-4. Point to the matching section in `docs/RUST_LEARNING_MAP.md` and one good reading link.
+4. Point to the matching section in `agent/learning/RUST_LEARNING_MAP.md` and one good reading link.
 
 ## Before changing code
 
-1. Read the docs listed in `CLAUDE.md` and the active phase in `tasks/TASKS.md`.
+1. Read the docs listed in `CLAUDE.md` and the active phase in `agent/tasks/TASKS.md`.
 2. Inspect the existing repository. Do not assume a file or module exists.
 3. State: active task, mode (🧑‍💻/🤖), acceptance criteria, Rust concepts it teaches.
 4. Propose a concise plan and wait for approval before broad changes.
@@ -75,10 +75,10 @@ For each meaningful change:
 
 ## Task tracking
 
-- Update `tasks/TASKS.md` when a task starts or finishes.
+- Update `agent/tasks/TASKS.md` when a task starts or finishes.
 - `[ ]` not started · `[/]` in progress · `[x]` complete · `[!]` blocked.
 - Do not mark a phase complete while its acceptance criteria are unmet.
-- Record decisions in the decision log (and an ADR in `adr/` for important ones).
+- Record decisions in the decision log (and an ADR in `docs/adr/` for important ones).
 
 ## Git discipline
 

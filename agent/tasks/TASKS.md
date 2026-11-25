@@ -4,7 +4,7 @@ Update this file as work progresses.
 
 **Status:** `[ ]` not started · `[/]` in progress · `[x]` complete · `[!]` blocked
 **Mode:** 🧑‍💻 YOU = owner writes the code, Claude guides/reviews · 🤖 CLAUDE = Claude writes and explains
-**Learn:** the Rust concept the task teaches (see `docs/RUST_LEARNING_MAP.md`)
+**Learn:** the Rust concept the task teaches (see `agent/learning/RUST_LEARNING_MAP.md`)
 
 ## Current status
 
@@ -108,7 +108,7 @@ Read `docs/PROTOCOL_NOTES.md` first.
 - [ ] T4.8 🤖 Release workflow: Linux x86_64 binary on tag (macOS optional) — *Learn: release builds*
 - [ ] T4.9 🤖 README: quickstart, demo GIF of the failing PR, limitations, driver TLS notes (`sslmode=disable`) — *Learn: documentation*
 - [ ] T4.10 🧑‍💻 Run the security checklist in `docs/SECURITY.md`; fix gaps
-- [ ] T4.11 🧑‍💻 Self-check questions in `docs/RUST_LEARNING_MAP.md` — answer them in `LEARNING.md`
+- [ ] T4.11 🧑‍💻 Self-check questions in `agent/learning/RUST_LEARNING_MAP.md` — answer them in `agent/learning/LEARNING.md`
 - [ ] T4.12 🤖 Choose license (LICENSE-DECISION.md), tag v0.1.0
 
 **Acceptance criteria**

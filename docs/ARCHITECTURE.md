@@ -91,8 +91,11 @@ querybudget/
 │   └── *.rs
 ├── examples/
 │   └── laravel-demo/           # Phase 4
-└── docs/, tasks/, adr/
+├── docs/                       # public project docs + docs/adr/
+└── agent/                      # agent instructions, tasks, planning, learning (not shipped)
 ```
+
+Full repository layout: see "Repository layout" in `README.md`.
 
 ## Key types (sketch, not final)
 

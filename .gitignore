@@ -1,0 +1,18 @@
+/target
+**/*.rs.bk
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# demo app
+examples/laravel-demo/vendor/
+examples/laravel-demo/node_modules/
+examples/laravel-demo/.env
+
+# local report outputs
+report.md
+*.qb.json

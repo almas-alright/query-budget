@@ -41,13 +41,15 @@ Then propose a short plan and wait for my approval before changing files.
 
 ## Suggested work rhythm
 
-- One task (or a small group of related tasks) per session.
+- Phase by phase. Each phase has its own branch (see "Git discipline" in `agent/AGENT.md`).
+- One task = one commit. Claude Code stops after each task and waits for you to say "go next".
+- At the end of a phase: push the branch, open a pull request, you review and merge.
 - Claude Code states the task, criteria and concepts first.
 - Review every diff before accepting it. Ask "why" about anything you don't understand.
 - Run the tests yourself and look at the real output.
 - Answer the 2–3 check questions.
 - Write your `agent/learning/LEARNING.md` entry.
-- Update `agent/tasks/TASKS.md`, then commit.
+- Claude Code updates `agent/tasks/TASKS.md` and commits the task.
 
 ## Rough time (estimate, not a promise)
 

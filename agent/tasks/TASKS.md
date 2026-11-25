@@ -17,6 +17,8 @@ Update this file as work progresses.
 
 ## Phase 0 — Setup and foundation
 
+Branch: `phase-0-setup` · one commit per task · PR to `main` at the end
+
 - [ ] T0.1 🧑‍💻 Install Rust, run `cargo new`, build and run hello world — *Learn: Cargo basics*
 - [ ] T0.2 🤖 Add `docker-compose.yml` with Postgres 17 for local development — *Learn: how tests will reach Postgres*
 - [ ] T0.3 🤖 Create module layout from `docs/ARCHITECTURE.md` (empty modules + `lib.rs`) — *Learn: modules, `pub`*
@@ -36,6 +38,8 @@ Update this file as work progresses.
 
 ## Phase 1 — Passthrough proxy (M1: "invisible proxy")
 
+Branch: `phase-1-passthrough-proxy` · one commit per task · PR to `main` at the end
+
 - [ ] T1.1 🤖 Listener on `--listen` (default `127.0.0.1:6433`); connect to upstream per client — *Learn: async, `TcpListener`*
 - [ ] T1.2 🧑‍💻 Session: split both sockets, two tasks copying bytes each way (no decoding yet) — *Learn: ownership moves, `tokio::spawn`, `Send`/`'static`*
 - [ ] T1.3 🤖 Handle startup: reply `N` to SSLRequest/GSSENCRequest, forward everything else; detect direct-TLS first byte `0x16` and log a clear error — *Learn: reading fixed-size headers*
@@ -53,6 +57,8 @@ Update this file as work progresses.
 ---
 
 ## Phase 2 — Reading the protocol (M2: "see every query")
+
+Branch: `phase-2-protocol` · one commit per task · PR to `main` at the end
 
 Read `docs/PROTOCOL_NOTES.md` first.
 
@@ -77,6 +83,8 @@ Read `docs/PROTOCOL_NOTES.md` first.
 
 ## Phase 3 — Normalize, count, N+1 (M3: "useful numbers")
 
+Branch: `phase-3-analysis` · one commit per task · PR to `main` at the end
+
 - [ ] T3.1 🧑‍💻 `normalize.rs`: tokenizer that replaces string/number literals with `?`, keeps `$1`, collapses `IN (…)`, normalizes whitespace and keyword case; handles quoted identifiers and `--`/`/* */` comments — *Learn: iterators, `peekable`, `String` vs `&str`*
 - [ ] T3.2 🧑‍💻 Normalizer tests with real ORM SQL (Eloquent, Prisma, Knex, SQLAlchemy samples) — *Learn: table-driven tests*
 - [ ] T3.3 🤖 Fingerprint = stable hash of normalized text (document the hash choice; must be stable across runs and platforms) — *Learn: hashing*
@@ -97,6 +105,8 @@ Read `docs/PROTOCOL_NOTES.md` first.
 ---
 
 ## Phase 4 — Baseline, CI, release (M4 = v0.1)
+
+Branch: `phase-4-release` · one commit per task · PR to `main` at the end
 
 - [ ] T4.1 🧑‍💻 `baseline.rs`: types + serde, `format_version: 1`, sorted output, size limit, reject unknown versions — *Learn: serde, file I/O*
 - [ ] T4.2 🧑‍💻 Compare rules: count increase beyond tolerance or new N+1 → regression; new/removed scopes and decreases → info — *Learn: enums for findings*

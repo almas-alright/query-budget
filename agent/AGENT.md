@@ -82,10 +82,39 @@ For each meaningful change:
 
 ## Git discipline
 
+Work **phase by phase**, never several phases at once.
+
+### Branch per phase
+
+| Phase | Branch |
+|---|---|
+| 0 | `phase-0-setup` |
+| 1 | `phase-1-passthrough-proxy` |
+| 2 | `phase-2-protocol` |
+| 3 | `phase-3-analysis` |
+| 4 | `phase-4-release` |
+
+- At the start of a phase: update `main` (`git checkout main && git pull`), then create the phase branch from it.
+- All work for that phase happens on its branch. Never commit directly to `main`.
+
+### One commit per task
+
+- Each task (T0.1, T0.2, …) is one commit on the phase branch.
+- Commit message format: `T1.2: split sockets into two forwarding tasks` (task ID + short description).
+- Commit only after the checks pass and the owner has reviewed the change and said it is OK.
+- The same commit includes the `agent/tasks/TASKS.md` status update for that task.
+
+### Stop points
+
+1. **After every task:** commit, then **stop**. Show the summary and check questions. Wait for the owner to say "go next" before starting the next task.
+2. **After the last task of a phase:** confirm every acceptance criterion, push the branch, open a pull request to `main` titled `Phase N: <name>` that lists the tasks, then **stop**. Wait for the owner to review and merge.
+3. Start the next phase only after the owner confirms the merge.
+
+### Other rules
+
+- Remotes always use SSH (`git@github.com:almas-alright/query-budget.git`), never HTTPS.
 - Do not rewrite history or force-push.
 - Do not commit secrets, real database dumps, `.env` files, or binaries.
-- Small focused commits with clear messages. One task ≈ one commit.
-- Do not commit unless the owner asks.
 
 ## Communication
 
